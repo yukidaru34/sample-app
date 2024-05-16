@@ -5,6 +5,10 @@ env:
     IMAGE_REPO: "ghcr.io/yuuking0304/ectr_dev_i231_sample"
 
 phases:
+  install:
+    commands:
+      # Dockerデーモンの起動
+      - service docker start
   pre_build:
     commands:
       - echo Logging in to GitHub Container Registry...
