@@ -5,14 +5,11 @@ env:
     IMAGE_REPO: "ghcr.io/yuuking0304/ectr_dev_i231_sample"
 
 phases:
-  install:
-    commands:
-      # Dockerデーモンの起動
-      - service docker start
   pre_build:
     commands:
       - echo Logging in to GitHub Container Registry...
-      - docker login ghcr.io -u yuuking -p $PAT
+      - docker login ghcr.io -u yuuking -p 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
+
       - REPOSITORY_URI=$IMAGE_REPO
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
