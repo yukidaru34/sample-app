@@ -40,4 +40,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository }}/my-image:latest
+        tags: ghcr.io/${{ github.repository }}/ectr_dev_i231_sample:latest
