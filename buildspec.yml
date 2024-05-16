@@ -3,6 +3,8 @@ version: 0.2
 env:
   variables:
     IMAGE_REPO: "ghcr.io/yuuking0304/ectr_dev_i231_sample"
+  parameter-store:
+    key: "PAT"
 
 phases:
   pre_build:
